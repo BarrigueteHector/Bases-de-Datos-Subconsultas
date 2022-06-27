@@ -1,6 +1,6 @@
 SQL> -- Tenemos las siguientes tablas:
 SQL> DESCRIBE OBRERO;
- Nombre                                                            ¿Nulo?   Tipo
+ Nombre                                                            Â¿Nulo?   Tipo
  ----------------------------------------------------------------- -------- --------------------------------------------
  ID_OBRERO                                                         NOT NULL NUMBER(3)
  NOMBRE                                                                     VARCHAR2(20)
@@ -12,14 +12,14 @@ SQL> DESCRIBE OBRERO;
  ID_EDO                                                                     NUMBER(2)
 
 SQL> DESCRIBE OBRA;
- Nombre                                                            ¿Nulo?   Tipo
+ Nombre                                                            Â¿Nulo?   Tipo
  ----------------------------------------------------------------- -------- --------------------------------------------
  ID_OBRA                                                           NOT NULL NUMBER(3)
  NOMBRE                                                                     VARCHAR2(15)
  ESTADO                                                                     VARCHAR2(15)
 
 SQL> DESCRIBE MAQUINA;
- Nombre                                                            ¿Nulo?   Tipo
+ Nombre                                                            Â¿Nulo?   Tipo
  ----------------------------------------------------------------- -------- --------------------------------------------
  ID_MAQUINA                                                        NOT NULL NUMBER(3)
  NOMBRE                                                                     VARCHAR2(15)
@@ -40,7 +40,7 @@ SQL> SELECT * FROM OBRERO;
          8 Enrique              Martinez                            1          4            25/04/21         28         
          9 Pablo                Quintana                            1          2            03/04/20         29         
         10 Lucia                Gutierrez                           1          5          1 03/10/20         27         
-        11 Monica               Pe¤a                                1                     1 01/07/21         22         
+        11 Monica               PeÂ¤a                                1                     1 01/07/21         22         
         12 Victor               Suarez                              1          6          4 03/08/20         29         
         13 Sergio               Raigoza                             1          6          1 01/07/20         13         
         14 Juan                 Lopez                               1          4          1 15/01/20          1         
@@ -133,7 +133,6 @@ SQL> SELECT ID_OBRERO, NOMBRE, APELLIDO, ID_OBRA FROM OBRERO
         38 Jaime                Salazar                       3                                                         
         45 Leticia              Costa                         3                                                         
 
-SQL> 
 SQL> -- Revisamos que la primera consulta sea correcta:
 SQL> SELECT ID_OBRA FROM OBRA
   2  WHERE NOMBRE = 'MONTERREY';
@@ -142,7 +141,6 @@ SQL> SELECT ID_OBRA FROM OBRA
 ----------                                                                                                              
          3                                                                                                              
 
-SQL> 
 SQL> -- Podemos ver que el ID de la obra es 3 y el obtenido en la subconsulta tambien es 3, por lo tanto es correcta la subconsulta
 SQL> 
 SQL> -- *************** RETO #2 ***************
@@ -183,7 +181,7 @@ SQL> SELECT ID_OBRERO, NOMBRE, APELLIDO, ID_MAQUINA FROM OBRERO
 
 22 filas seleccionadas.
 
-SQL> -- Antes de revisar si la primera consulta es correcta, vemos que estan en desorden los ID's, podemos aplicar un ORDER BY para que sea m s facil de leer.
+SQL> -- Antes de revisar si la primera consulta es correcta, vemos que estan en desorden los ID's, podemos aplicar un ORDER BY para que sea mas facil de leer.
 SQL> -- Solo lo agregamos despues de los parentesis.
 SQL> SELECT ID_OBRERO, NOMBRE, APELLIDO, ID_MAQUINA FROM OBRERO
   2  WHERE ID_MAQUINA IN
@@ -231,4 +229,3 @@ ID_MAQUINA
          8                                                                                                              
 
 SQL> -- Vemos que los ID de maquinas que son pesadas o semipesadas son correctos en la subconsulta, por lo tanto esta es correcta
-SQL> SPOOL OFF;
