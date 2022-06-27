@@ -7,6 +7,7 @@ Es una consulta dentro de una consulta. En otras palabras, a partir de una consu
 Antecedentes
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 [DQL](https://github.com/BarrigueteHector/Bases-de-Datos-DQL): **SELECT**.
+
 [Consultas y Funciones de agregación](https://github.com/BarrigueteHector/Bases-de-Datos-Consultas-y-Funciones-de-agregacion): **ORDER BY**.
 
 Desarrollo
